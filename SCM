@@ -1,0 +1,17 @@
+pipeline{
+  agent any
+  stages{
+    stage('Testing'){
+      steps{
+        echo 'running Tests'
+    }
+   }
+   stage('Build'){
+   steps{
+   echo 'Building jar files...'
+     bat 'python Q1.py'
+   }
+  }
+ }
+}
+© 2022 GitHub, Inc.
